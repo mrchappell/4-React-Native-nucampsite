@@ -5,21 +5,22 @@ import CampsiteInfo from './CampsiteInfoComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import { View, Platform, StyleSheet, Text, ScrollView, Image } from 'react-native';
-import { Icon } from 'react-native-elements';
-import { createStackNavigator, createDrawerNavigator, DrawerItems } from 'react-navigation';
+import {
+    createStackNavigator, createDrawerNavigator,
+    DrawerItems
+} from 'react-navigation';
+import { Icon } from 'react-native-elements'
 import SafeAreaView from 'react-native-safe-area-view';
 import { connect } from 'react-redux';
-import {
-    fetchCampsites, fetchComments, fetchPromotions,
-    fetchPartners
-} from '../redux/ActionCreators';
+import { fetchCampsites, fetchComments, fetchPromotions,
+    fetchPartners } from '../redux/ActionCreators';
 
-const mapDispatchToProps = {
-    fetchCampsites,
-    fetchComments,
-    fetchPromotions,
-    fetchPartners
-};
+    const mapDispatchToProps = {
+        fetchCampsites,
+        fetchComments,
+        fetchPromotions,
+        fetchPartners
+    };
 
 const DirectoryNavigator = createStackNavigator(
     {
@@ -29,7 +30,7 @@ const DirectoryNavigator = createStackNavigator(
                 headerLeft: <Icon
                     name='list'
                     type='font-awesome'
-                    iconStyle={StyleSheet.stackIcon}
+                    iconStyle={styles.stackIcon}
                     onPress={() => navigation.toggleDrawer()}
                 />
             })
