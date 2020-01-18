@@ -92,7 +92,7 @@ class Reservation extends Component {
                             Alert.alert(
                                 'Begin Search?',
                                 'Number of Campers ' + this.state.campers + ' \n' +
-                                'Hike In?' + this.state.hikeIn + "\n" +
+                                'Hike In? ' + this.state.hikeIn + "\n" +
                                 'Date: ' + this.state.date,
                                 [
                                     {
