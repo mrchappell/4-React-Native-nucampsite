@@ -42,7 +42,7 @@ function RenderCampsite(props) {
         },
         onPanResponderEnd: (e, gestureState) => {
             console.log('pan responder end', gestureState);
-            if (recognizeDrag(gestureState)) {
+            if (recognizeDrag=(gestureState)) {
                 Alert.alert(
                     'Add Favorite',
                     'Are you sure you wish to add ' + campsite.name + ' to favorites?',
